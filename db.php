@@ -1,7 +1,11 @@
 <?php
 
 $host = "localhost";
+member1-create
 $dbname = "employee_management";
+
+$dbname = "employee_db";
+main
 $username = "root";
 $password = "";
 
@@ -11,6 +15,7 @@ try {
         $username,
         $password
     );
+member1-create
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     die("Database connection failed.");
@@ -20,3 +25,16 @@ function e($value) {
     return htmlspecialchars((string)$value, ENT_QUOTES, 'UTF-8');
 }
 ?>
+
+
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+} catch (PDOException $e) {
+    die("Database connection failed: " . $e->getMessage());
+}
+
+function e($value)
+{
+    return htmlspecialchars($value ?? "", ENT_QUOTES, "UTF-8");
+}
+ main
